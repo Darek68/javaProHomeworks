@@ -8,23 +8,23 @@ public class Cat {
     @BeforeSuite
     @Test
     public static void CatIsStart(){
-        System.out.println("Кот появился!");
+        System.out.println("BeforeSuite Кот появился!");
     }
     @Test(priority = 5)
     public static void CatIsGood(){
-        System.out.println("Мяууу...");
+        System.out.println("5 Потом кот хороший...");
     }
     @Test(priority = 10)
     public static void CatIsBed(){
-        System.out.println("Хррр...");
+        System.out.println("10 Сперва кот злой...");
     }
     @Test
     public static void CatIsHungry(){
-        System.out.println("Муррр...");
+        System.out.println("Defoult Кот голодный...");
     }
     @AfterSuite
-    @Test
+    @Test(priority = 10)
     public static void CatIsGo(){
-        System.out.println("Кот уходит.");
+        System.out.println("AfterSuite Кот уходит.");
     }
 }
