@@ -1,9 +1,7 @@
 package ru.darek;
 
-import ru.darek.annotation.AfterSuite;
-import ru.darek.annotation.BeforeSuite;
-import ru.darek.annotation.Test;
-
+import ru.darek.annotation.*;
+//@Disabled
 public class Cat {
     @BeforeSuite
     @Test
@@ -14,6 +12,7 @@ public class Cat {
     public static void CatIsGood(){
         System.out.println("5 Потом кот хороший...");
     }
+    @Disabled
     @Test(priority = 10)
     public static void CatIsBed(){
         System.out.println("10 Сперва кот злой...");
@@ -26,5 +25,15 @@ public class Cat {
     @Test(priority = 10)
     public static void CatIsGo(){
         System.out.println("AfterSuite Кот уходит.");
+    }
+    @After
+    @Test(priority = 10)
+    public static void CatIsMissing(){
+        System.out.println("After Кот уснул.");
+    }
+    @Before
+    @Test
+    public static void CatIsReady(){
+        System.out.println("Before Кот проснулся!");
     }
 }
