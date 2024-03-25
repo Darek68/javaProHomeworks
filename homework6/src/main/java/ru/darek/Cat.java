@@ -4,7 +4,6 @@ import ru.darek.annotation.*;
 //@Disabled
 public class Cat {
     @BeforeSuite
-    @Test
     public static void CatIsStart(){
         System.out.println("BeforeSuite Кот появился!");
     }
@@ -22,7 +21,6 @@ public class Cat {
         System.out.println("Defoult Кот голодный...");
     }
     @AfterSuite
-    @Test(priority = 10)
     public static void CatIsGo(){
         System.out.println("AfterSuite Кот уходит.");
     }
@@ -36,4 +34,10 @@ public class Cat {
     public static void CatIsReady(){
         System.out.println("Before Кот проснулся!");
     }
+    @ThrowsException
+    @Test(priority = 8)
+    public static void CatIsException() throws ClassNotFoundException { throw new ClassNotFoundException(); }
+    @ThrowsException
+    @Test
+    public static void CatIsExceptionOver(){ throw  new ArithmeticException(); }
 }
