@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="CommitHW6build.gradle">
-      <change beforePath="$PROJECT_DIR$/homework6/src/main/java/ru/darek/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/main/java/ru/darek/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework6/src/main/java/ru/darek/TestsOfClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework6/src/main/java/ru/darek/TestsOfClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
-    </list>
+    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="CommitHW6build.gradle" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
