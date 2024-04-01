@@ -1,11 +1,14 @@
 package ru.darek;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import ru.darek.annotation.*;
 
 import java.lang.reflect.Method;
 import java.util.*;
 
 public class TestsOfClass {
+    public static final Logger logger = LogManager.getLogger(TestsOfClass.class.getName());
     private static int successTests;
     private static int crashTests;
     private static Set<Method> mSetBefore = new HashSet<>();
@@ -15,7 +18,7 @@ public class TestsOfClass {
 
     static {
         for (int i = 0; i < 12; i++) {
-            lists[i] = new ArrayList<Method>();
+            lists[i] = new ArrayList<>();
         }
     }
 
@@ -45,7 +48,7 @@ public class TestsOfClass {
                     } else crashTests++;
                     mSetUsedMethod.add(m);
                 }
-                System.out.println("-----------");
+                logger.info("-----------");
             }
         }
         return String.format("Всего тестов %d, успешных %d, провальных %d",
