@@ -45,6 +45,15 @@ public class Main {
              .collect(Collectors.toList());
         // Для иного порядка - можно поменять порядок перечисления ENUM или..
         // написать свой класс:   public class MyComparator implements Comparator<Task>
+        logger.info("-Сортировка по статусу в алфавитном порядке ---------------------");
+        tasks = getTasksStream();
+        tasks.sorted((task, otherTask) -> {
+            String str1 = task.getStatus().name();
+            String str2 = otherTask.getStatus().name();
+            if (str1 == null || str2 == null || str1.compareTo(str2) == 0) return 0;
+            return  str1.compareTo(str2);
+        }).peek(tsk->logger.info(tsk.getId() + " " + tsk.getStatus()))
+          .collect(Collectors.toList());
     }
 
     public static Stream<Task> getTasksStream() {

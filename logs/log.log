@@ -1,20 +1,29 @@
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:16) - -Получение списка по статусу (запланирован, не запланирован)---------------
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:21) - уборка
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:21) - готовка
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:21) - домашка
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:24) - -Проверка по id (найден)----------------------------------
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:27) - Task{id=3, name='завтрак', status=ATWORK}
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:31) - -Проверка по id (не найден)--------------------------------
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:33) - найдено соответствий: 0
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:35) - Задача с номером 9 найдена? false
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:37) - -Количество задач со статусом В РАБОТЕ---------------------
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:39) - Количество задач в статусе 'в работе': 2
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:40) - -Задачи отсортированные не запланированные, запланированные, в работе, выполенные, закрытые, истекшие------
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 8 UNPLANNED
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 6 PLANNED
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 7 PLANNED
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 3 ATWORK
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 4 ATWORK
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 2 COMPLETED
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 1 CLOSED
-INFO  2024-04-03 21:30:12 [main] ru.darek.Main (Main.java:44) - 5 EXPIRED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:16) - -Получение списка по статусу (запланирован, не запланирован)---------------
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:21) - уборка
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:21) - готовка
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:21) - домашка
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:24) - -Проверка по id (найден)----------------------------------
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:27) - Task{id=3, name='завтрак', status=ATWORK}
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:31) - -Проверка по id (не найден)--------------------------------
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:33) - найдено соответствий: 0
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:35) - Задача с номером 9 найдена? false
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:37) - -Количество задач со статусом В РАБОТЕ---------------------
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:39) - Количество задач в статусе 'в работе': 2
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:40) - -Задачи отсортированные не запланированные, запланированные, в работе, выполенные, закрытые, истекшие------
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 8 UNPLANNED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 6 PLANNED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 7 PLANNED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 3 ATWORK
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 4 ATWORK
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 2 COMPLETED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 1 CLOSED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:44) - 5 EXPIRED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:48) - -Сортировка по статусу в алфавитном порядке ---------------------
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 3 ATWORK
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 4 ATWORK
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 1 CLOSED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 2 COMPLETED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 5 EXPIRED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 6 PLANNED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 7 PLANNED
+INFO  2024-04-05 22:52:06 [main] ru.darek.Main (Main.java:55) - 8 UNPLANNED
