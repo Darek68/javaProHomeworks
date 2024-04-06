@@ -1,18 +1,18 @@
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:11) - BeforeSuite Кот появился!
-INFO  2024-04-01 17:08:07 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:47) - 8 У кота исключение ClassNotFoundException
-INFO  2024-04-01 17:08:07 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:14) - 5 Потом кот хороший...
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:35) - After Кот уснул.
-INFO  2024-04-01 17:08:07 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:54) - У кота исключение ArithmeticException
-INFO  2024-04-01 17:08:07 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:24) - Defoult Кот голодный...
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:35) - After Кот уснул.
-INFO  2024-04-01 17:08:07 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
-INFO  2024-04-01 17:08:07 [main] ru.darek.Cat (Cat.java:29) - AfterSuite Кот уходит.
-INFO  2024-04-01 17:08:07 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:11) - BeforeSuite Кот появился!
+INFO  2024-04-06 09:18:08 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:47) - 8 У кота исключение ClassNotFoundException
+INFO  2024-04-06 09:18:08 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:14) - 5 Потом кот хороший...
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:35) - After Кот уснул.
+INFO  2024-04-06 09:18:08 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:54) - У кота исключение ArithmeticException
+INFO  2024-04-06 09:18:08 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:41) - Before Кот проснулся!
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:24) - Defoult Кот голодный...
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:35) - After Кот уснул.
+INFO  2024-04-06 09:18:08 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
+INFO  2024-04-06 09:18:08 [main] ru.darek.Cat (Cat.java:29) - AfterSuite Кот уходит.
+INFO  2024-04-06 09:18:08 [main] ru.darek.TestsOfClass (TestsOfClass.java:51) - -----------
