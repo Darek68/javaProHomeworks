@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="CommitHW8Final">
+    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="CommitHW8Final2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/homework-stream-api/src/main/java/ru/darek/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/homework-stream-api/src/main/java/ru/darek/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
@@ -67,7 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/JavaBasicProject/javaProHomeworks",
+    "last_opened_file_path": "C:/JavaBasicProject/stream-api-main",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -84,7 +84,7 @@
       <recent name="C:\JavaBasicProject\javaProHomeworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.darek.Main" />
       <module name="javaProHomeworks.homework-stream-api.main" />
@@ -134,7 +134,8 @@
       <workItem from="1711978093404" duration="979000" />
       <workItem from="1712084927751" duration="5795000" />
       <workItem from="1712135888701" duration="9821000" />
-      <workItem from="1712343071078" duration="3592000" />
+      <workItem from="1712343071078" duration="3667000" />
+      <workItem from="1712383813946" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommitMaster">
       <created>1711280081937</created>
@@ -206,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1712169133601</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="CommitHW8Final2">
+      <created>1712347172769</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712347172769</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +237,8 @@
     <MESSAGE value="CommitMaster4" />
     <MESSAGE value="CommitHW8First" />
     <MESSAGE value="CommitHW8Final" />
-    <option name="LAST_COMMIT_MESSAGE" value="CommitHW8Final" />
+    <MESSAGE value="CommitHW8Final2" />
+    <option name="LAST_COMMIT_MESSAGE" value="CommitHW8Final2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -241,7 +250,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/homework-stream-api/src/main/java/ru/darek/Main.java</url>
-          <line>56</line>
+          <line>65</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>

@@ -54,6 +54,15 @@ public class Main {
             return  str1.compareTo(str2);
         }).peek(tsk->logger.info(tsk.getId() + " " + tsk.getStatus()))
           .collect(Collectors.toList());
+        logger.info("-Сортировка по статусу в алфавитном порядке через forEach ---------------------");
+        tasks = getTasksStream();
+        tasks.sorted((task, otherTask) -> {
+                    String str1 = task.getStatus().name();
+                    String str2 = otherTask.getStatus().name();
+                    if (str1 == null || str2 == null || str1.compareTo(str2) == 0) return 0;
+                    return  str1.compareTo(str2);
+                }).forEach(task -> logger.info(task.getId() + " " + task.getStatus()));
+
     }
 
     public static Stream<Task> getTasksStream() {
