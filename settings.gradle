@@ -1,4 +1,5 @@
 rootProject.name = 'javaProHomeworks'
 include 'homework6'
 include 'homework-stream-api'
+include 'threadpool11'
 
