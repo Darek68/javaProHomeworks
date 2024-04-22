@@ -39,7 +39,6 @@ public class MyThreadPool {
                         try {
                             r = nextTask();
                             r.run();
-                            sleep();
                         } catch (InterruptedException e) {
                             Thread.currentThread().interrupt();
                         }
@@ -55,7 +54,7 @@ public class MyThreadPool {
             throw new IllegalStateException("MyThreadPool is shutdown!");
         }
         list.add(r);
-        notifyAll();
+        notify();
         return list.size();
     }
 

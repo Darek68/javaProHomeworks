@@ -7,6 +7,7 @@
     <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="CommitHW8Final2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/threadpool11/src/main/java/ru/darek/MyThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/threadpool11/src/main/java/ru/darek/MyThreadPool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <recent name="C:\JavaBasicProject\javaProHomeworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.MyApp">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.darek.Main" />
       <module name="javaProHomeworks.homework-stream-api.main" />
@@ -110,8 +111,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.darek.MyApp" />
+      <module name="javaProHomeworks.threadpool11.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.darek.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyApp" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -137,6 +152,9 @@
       <workItem from="1712383813946" duration="761000" />
       <workItem from="1712423223783" duration="730000" />
       <workItem from="1712500601761" duration="599000" />
+      <workItem from="1713599388909" duration="14116000" />
+      <workItem from="1713766822237" duration="179000" />
+      <workItem from="1713767440023" duration="106000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommitMaster">
       <created>1711280081937</created>
