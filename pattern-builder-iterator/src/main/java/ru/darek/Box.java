@@ -18,7 +18,6 @@ public final class Box implements Iterator<String> {
         this.forthList = forthList;
         itr = new Iterator[]{firstList.iterator(), secondList.iterator(), thirdList.iterator(), forthList.iterator()};
     }
-
     @Override
     public boolean hasNext() {
         for (int i = 0; i < 4; i++) {
@@ -32,7 +31,7 @@ public final class Box implements Iterator<String> {
         for (int i = 0; i < 4; i++) {
             if (itr[i].hasNext()) return itr[i].next();
         }
-        return null;
+        throw new IllegalStateException("Empty");
     }
 }
 

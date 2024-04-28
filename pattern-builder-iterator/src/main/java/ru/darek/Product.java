@@ -25,7 +25,7 @@ public final class Product {
         height = builder.height;
     }
 
-    public static final class Builder {
+    protected static final class Builder {
         private int id;
         private String title;
         private String description;
