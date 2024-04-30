@@ -16,14 +16,6 @@ public class MyApp {
                 .height(55)
                 .build();
 
-        Box box = new Box(List.of("1", "2", "3"),
-                List.of("11", "22", "33", "44", "55", "66"),
-                List.of(),
-                List.of("5b", "6b", "7b", "8b"));
-        while (box.hasNext()) {
-            System.out.println(box.next());
-        }
-
         BoxNew boxNew = new BoxNew(List.of("1", "2", "3"),
                 null,
                 List.of("1a", "2a", "3a", "4a", "5a", "6a", "7a"),
