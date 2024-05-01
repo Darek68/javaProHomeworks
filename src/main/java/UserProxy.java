@@ -23,6 +23,7 @@ public class UserProxy {
         }
     }
     public void userAdd(List<User> users, String table){
+        logger.info("Create users by proxy");
         insertUserSql = String.format(insertUserSql,table);
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertUserSql);) {
             connection.setAutoCommit(false);
@@ -32,7 +33,7 @@ public class UserProxy {
                 preparedStatement.setInt(2, user.getAge());
                 preparedStatement.setDouble(3, user.getBalance());
                 preparedStatement.setBoolean(4, user.isSex());
-                preparedStatement.setString(5, "Create with proxy");
+                preparedStatement.setString(5, "Create by proxy");
                 preparedStatement.executeUpdate();
                 logger.debug("Пользователь " + user.getName() + " успешно создан");
             }
