@@ -24,6 +24,7 @@ public class UserProxy {
     }
     public void userAdd(List<User> users, String table){
         logger.info("Create users by proxy");
+        if (users == null || table == null) return;
         insertUserSql = String.format(insertUserSql,table);
         try (PreparedStatement preparedStatement = connection.prepareStatement(insertUserSql);) {
             connection.setAutoCommit(false);

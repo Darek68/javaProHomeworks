@@ -1,27 +1,26 @@
-DEBUG 2024-04-22 09:36:10 [Thread-0] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-0 is waiting
-DEBUG 2024-04-22 09:36:10 [main] ru.darek.MyThreadPool (MyThreadPool.java:26) - Конструктор отработал!
-DEBUG 2024-04-22 09:36:10 [Thread-2] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-2 is waiting
-DEBUG 2024-04-22 09:36:10 [Thread-1] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-1 is waiting
-INFO  2024-04-22 09:36:10 [Thread-2] ru.darek.MyApp$1 (MyApp.java:15) - Thread-2 Выполняется задача № 2
-INFO  2024-04-22 09:36:10 [Thread-0] ru.darek.MyApp$1 (MyApp.java:15) - Thread-0 Выполняется задача № 0
-INFO  2024-04-22 09:36:10 [Thread-1] ru.darek.MyApp$1 (MyApp.java:15) - Thread-1 Выполняется задача № 1
-INFO  2024-04-22 09:36:10 [Thread-2] ru.darek.MyApp$1 (MyApp.java:15) - Thread-2 Выполняется задача № 3
-INFO  2024-04-22 09:36:10 [Thread-0] ru.darek.MyApp$1 (MyApp.java:15) - Thread-0 Выполняется задача № 4
-INFO  2024-04-22 09:36:10 [Thread-1] ru.darek.MyApp$1 (MyApp.java:15) - Thread-1 Выполняется задача № 5
-INFO  2024-04-22 09:36:10 [Thread-2] ru.darek.MyApp$1 (MyApp.java:15) - Thread-2 Выполняется задача № 6
-DEBUG 2024-04-22 09:36:10 [Thread-0] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-0 is waiting
-DEBUG 2024-04-22 09:36:10 [Thread-2] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-2 is waiting
-DEBUG 2024-04-22 09:36:10 [Thread-1] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-1 is waiting
-INFO  2024-04-22 09:36:16 [Thread-1] ru.darek.MyApp$2 (MyApp.java:30) - Thread-1 Выполняется задача № 11
-INFO  2024-04-22 09:36:16 [Thread-2] ru.darek.MyApp$2 (MyApp.java:30) - Thread-2 Выполняется задача № 12
-INFO  2024-04-22 09:36:16 [Thread-0] ru.darek.MyApp$2 (MyApp.java:30) - Thread-0 Выполняется задача № 10
-INFO  2024-04-22 09:36:16 [Thread-1] ru.darek.MyApp$2 (MyApp.java:30) - Thread-1 Выполняется задача № 13
-INFO  2024-04-22 09:36:16 [Thread-2] ru.darek.MyApp$2 (MyApp.java:30) - Thread-2 Выполняется задача № 14
-DEBUG 2024-04-22 09:36:16 [Thread-0] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-0 is waiting
-DEBUG 2024-04-22 09:36:16 [Thread-2] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-2 is waiting
-DEBUG 2024-04-22 09:36:16 [Thread-1] ru.darek.MyThreadPool (MyThreadPool.java:63) - Thread-1 is waiting
-INFO  2024-04-22 09:36:20 [main] ru.darek.MyApp (MyApp.java:39) - Тормозим пулл?
-DEBUG 2024-04-22 09:36:20 [main] ru.darek.MyThreadPool (MyThreadPool.java:73) -  shutdown()
-DEBUG 2024-04-22 09:36:20 [Thread-0] ru.darek.MyThreadPool$1 (MyThreadPool.java:46) - Thread-0 is closed
-DEBUG 2024-04-22 09:36:20 [Thread-1] ru.darek.MyThreadPool$1 (MyThreadPool.java:46) - Thread-1 is closed
-DEBUG 2024-04-22 09:36:20 [Thread-2] ru.darek.MyThreadPool$1 (MyThreadPool.java:46) - Thread-2 is closed
+DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:32) - Создан коннект к БД
+DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:42) - Создана схема testproxy
+DEBUG 2024-05-25 20:14:06 [main] InitDao (InitDao.java:42) -     CREATE TABLE IF NOT EXISTS %s.%s (
+    ID int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
+    NAME TEXT,
+    AGE            int4,
+    BALANCE      float8,
+    SEX            bool,
+    NOTICE VARCHAR(60));
+
+DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:44) - Создана таблица users
+DEBUG 2024-05-25 20:14:06 [main] InitDao (InitDao.java:59) - Пользователь Anonim(Anonim) успешно создан
+DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:46) - Успешно создан пробный пользователь
+DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Masha успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Sasha успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Dasha успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Rom успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Alex успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:37) - Время выполнения? 5
+INFO  2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:26) - Create users by proxy
+DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Masha успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Sasha успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Dasha успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Rom успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Alex успешно создан
+DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:41) - Время выполнения? 4

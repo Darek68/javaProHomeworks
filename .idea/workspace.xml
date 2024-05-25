@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="CommitHW8Final3">
+    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="FirstCommitProxyV2">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PostgresDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserProxy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,8 +47,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -64,26 +70,34 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/JavaBasicProject/stream-api-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/JavaBasicProject/javaProHomeworks/src/main/resources&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JavaBasicProject/javaProHomeworks/homework-stream-api/src/main/java/ru/darek/Main.java&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/JavaBasicProject/javaProHomeworks/pattern-proxy/src/main/java/ru/darek/Main.java&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\JavaBasicProject\javaProHomeworks\src\main\resources" />
       <recent name="C:\JavaBasicProject\javaProHomeworks\homework-stream-api\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\JavaBasicProject\javaProHomeworks\src\main\java" />
       <recent name="C:\JavaBasicProject\javaProHomeworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyApp">
+  <component name="RunManager" selected="Application.MyApp (2)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.darek.Main" />
       <module name="javaProHomeworks.homework-stream-api.main" />
@@ -110,6 +124,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.darek.MyApp" />
+      <module name="javaProHomeworks.pattern-builder-iterator.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.darek.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyApp (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyApp" />
+      <module name="javaProHomeworks.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.darek.MyApp" />
       <module name="javaProHomeworks.threadpool11.main" />
@@ -125,9 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyApp (2)" />
         <item itemvalue="Application.MyApp" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MyApp (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -154,6 +190,15 @@
       <workItem from="1713599388909" duration="14116000" />
       <workItem from="1713766822237" duration="179000" />
       <workItem from="1713767440023" duration="106000" />
+      <workItem from="1713767840887" duration="79000" />
+      <workItem from="1713893826240" duration="4837000" />
+      <workItem from="1713936700977" duration="9402000" />
+      <workItem from="1714328486800" duration="5912000" />
+      <workItem from="1714417802667" duration="606000" />
+      <workItem from="1714450763940" duration="26997000" />
+      <workItem from="1714546614422" duration="13953000" />
+      <workItem from="1714568501540" duration="1950000" />
+      <workItem from="1716654975958" duration="2338000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommitMaster">
       <created>1711280081937</created>
@@ -232,7 +277,49 @@
       <option name="project" value="LOCAL" />
       <updated>1712347172769</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commitMaster2204">
+      <created>1713767880087</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1713767880087</updated>
+    </task>
+    <task id="LOCAL-00013" summary="FirstCommitHW15">
+      <created>1713984376174</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1713984376174</updated>
+    </task>
+    <task id="LOCAL-00014" summary="SecondCommitHW15">
+      <created>1714335718447</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714335718447</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ThirdCommitHW15">
+      <created>1714451062495</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1714451062495</updated>
+    </task>
+    <task id="LOCAL-00016" summary="FirstCommitProxy">
+      <created>1714561403489</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1714561403489</updated>
+    </task>
+    <task id="LOCAL-00017" summary="FirstCommitProxyV2">
+      <created>1714570002349</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1714570002349</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +343,13 @@
     <MESSAGE value="CommitHW8First" />
     <MESSAGE value="CommitHW8Final" />
     <MESSAGE value="CommitHW8Final2" />
-    <option name="LAST_COMMIT_MESSAGE" value="CommitHW8Final2" />
+    <MESSAGE value="commitMaster2204" />
+    <MESSAGE value="FirstCommitHW15" />
+    <MESSAGE value="SecondCommitHW15" />
+    <MESSAGE value="ThirdCommitHW15" />
+    <MESSAGE value="FirstCommitProxy" />
+    <MESSAGE value="FirstCommitProxyV2" />
+    <option name="LAST_COMMIT_MESSAGE" value="FirstCommitProxyV2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -270,6 +363,16 @@
           <url>file://$PROJECT_DIR$/homework-stream-api/src/main/java/ru/darek/Main.java</url>
           <line>65</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/Main.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/MyApp.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

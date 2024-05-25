@@ -2,4 +2,6 @@ rootProject.name = 'javaProHomeworks'
 include 'homework6'
 include 'homework-stream-api'
 include 'threadpool11'
+include 'pattern-builder-iterator'
+include 'pattern-proxy'
 

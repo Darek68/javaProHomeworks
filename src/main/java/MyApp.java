@@ -14,9 +14,11 @@ public class MyApp {
         setConnect();
         init("testproxy", "users");
         List<User> users = getUser();
+
         UserDao userDao = new UserDao(connection);
         userDao.userAdd(users, "testproxy.users");
         userDao = null;
+
         UserProxy userProxy = new UserProxy(connection);
         userProxy.userAdd(users, "testproxy.users");
         userProxy.disconnect();
