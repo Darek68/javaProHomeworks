@@ -4,17 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="FirstCommitProxyV3">
+    <list default="true" id="9c1f21b5-8da8-4f2d-ada0-f9c5d97bc8df" name="Changes" comment="FirstCommitProxyV4">
       <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pattern-proxy/build.gradle" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/ConnDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/InitDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/MyApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/java/ru/darek/UserProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pattern-proxy/src/main/resources/log4j2.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/PostgresDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/log.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/log.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/InitDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserProxy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +106,7 @@
       <recent name="C:\JavaBasicProject\javaProHomeworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyApp (2)">
+  <component name="RunManager" selected="Application.MyApp (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.darek.Main" />
       <module name="javaProHomeworks.homework-stream-api.main" />
@@ -131,22 +133,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyApp (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="MyApp (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MyApp" />
+      <module name="javaProHomeworks.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyApp (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.darek.MyApp" />
-      <module name="javaProHomeworks.pattern-builder-iterator.main" />
+      <module name="javaProHomeworks.pattern-proxy.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ru.darek.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyApp (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MyApp" />
-      <module name="javaProHomeworks.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,11 +168,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MyApp (3)" />
         <item itemvalue="Application.MyApp (2)" />
         <item itemvalue="Application.MyApp" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.MyApp (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -205,7 +207,7 @@
       <workItem from="1714450763940" duration="26997000" />
       <workItem from="1714546614422" duration="13953000" />
       <workItem from="1714568501540" duration="1950000" />
-      <workItem from="1716654975958" duration="2791000" />
+      <workItem from="1716654975958" duration="3136000" />
     </task>
     <task id="LOCAL-00001" summary="FirstCommitMaster">
       <created>1711280081937</created>
@@ -333,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716657366812</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="FirstCommitProxyV4">
+      <created>1716657874048</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1716657874048</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +373,8 @@
     <MESSAGE value="FirstCommitProxy" />
     <MESSAGE value="FirstCommitProxyV2" />
     <MESSAGE value="FirstCommitProxyV3" />
-    <option name="LAST_COMMIT_MESSAGE" value="FirstCommitProxyV3" />
+    <MESSAGE value="FirstCommitProxyV4" />
+    <option name="LAST_COMMIT_MESSAGE" value="FirstCommitProxyV4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -378,11 +388,6 @@
           <url>file://$PROJECT_DIR$/homework-stream-api/src/main/java/ru/darek/Main.java</url>
           <line>65</line>
           <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/MyApp.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

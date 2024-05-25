@@ -1,6 +1,6 @@
-DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:32) - Создан коннект к БД
-DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:42) - Создана схема testproxy
-DEBUG 2024-05-25 20:14:06 [main] InitDao (InitDao.java:42) -     CREATE TABLE IF NOT EXISTS %s.%s (
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.MyApp (MyApp.java:36) - Создан коннект к БД
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.MyApp (MyApp.java:46) - Создана схема testproxy
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.InitDao (InitDao.java:47) -     CREATE TABLE IF NOT EXISTS %s.%s (
     ID int4 GENERATED ALWAYS AS IDENTITY NOT NULL,
     NAME TEXT,
     AGE            int4,
@@ -8,19 +8,19 @@ DEBUG 2024-05-25 20:14:06 [main] InitDao (InitDao.java:42) -     CREATE TABLE IF
     SEX            bool,
     NOTICE VARCHAR(60));
 
-DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:44) - Создана таблица users
-DEBUG 2024-05-25 20:14:06 [main] InitDao (InitDao.java:59) - Пользователь Anonim(Anonim) успешно создан
-DEBUG 2024-05-25 20:14:06 [main] MyApp (MyApp.java:46) - Успешно создан пробный пользователь
-DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Masha успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Sasha успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Dasha успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Rom успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:35) - Пользователь Alex успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserDao (UserDao.java:37) - Время выполнения? 5
-INFO  2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:26) - Create users by proxy
-DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Masha успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Sasha успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Dasha успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Rom успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:39) - Пользователь Alex успешно создан
-DEBUG 2024-05-25 20:14:06 [main] UserProxy (UserProxy.java:41) - Время выполнения? 4
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.MyApp (MyApp.java:48) - Создана таблица users
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.InitDao (InitDao.java:64) - Пользователь Anonim(Anonim) успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.MyApp (MyApp.java:50) - Успешно создан пробный пользователь
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserDao (UserDao.java:37) - Пользователь Masha успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserDao (UserDao.java:37) - Пользователь Sasha успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserDao (UserDao.java:37) - Пользователь Dasha успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserDao (UserDao.java:37) - Пользователь Rom успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserDao (UserDao.java:37) - Пользователь Alex успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserDao (UserDao.java:39) - Время выполнения? 7
+INFO  2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:28) - Create users by proxy
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:41) - Пользователь Masha успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:41) - Пользователь Sasha успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:41) - Пользователь Dasha успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:41) - Пользователь Rom успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:41) - Пользователь Alex успешно создан
+DEBUG 2024-05-25 20:28:50 [main] ru.darek.UserProxy (UserProxy.java:43) - Время выполнения? 4
