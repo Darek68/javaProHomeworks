@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.*;
+
 
 public class HttpRequest {
     private String rawRequest;
@@ -16,6 +18,9 @@ public class HttpRequest {
     private Map<String, String> headers = new HashMap<>();
     private String body;
     private static final String CRLF = "\r\n";
+
+    private String sessionId;
+    private static final String SESSIONID = "SESSIONID";
 
     private static final Logger logger = LoggerFactory.getLogger(HttpRequest.class);
 
@@ -38,11 +43,24 @@ public class HttpRequest {
     public HttpMethod getMethod() {
         return method;
     }
+    public String getSessionId() {
+        int start, stop;
+        String sessionId = getHeaderValue("Cookie");
+        if (sessionId!=null && sessionId.contains(SESSIONID)){
+          /*  start = sessionId.indexOf("SESSIONID") + 9;
+            stop = sessionId.indexOf(" ",start);
+            sessionId = sessionId.substring(start,stop);
+            if (sessionId==SESSIONID) */ return "";
+        }
+        return ("\r\nSet-Cookie: SESSIONID=" + this.sessionId);
+    }
 
     public HttpRequest(String rawRequest) {
         this.rawRequest = rawRequest;
         this.parseRequestLine();
         this.tryToParseBody();
+        this.sessionId = UUID.randomUUID().toString();
+        logger.info("sessionIdUUID {}", sessionId);
 
         logger.debug("\nall-rawRequest\n{}", rawRequest);
         logger.trace("{} {}\nParameters: {}\nBody: {}", method, uri, parameters, body); // TODO правильно все поназывать

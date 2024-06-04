@@ -2,7 +2,6 @@ package ru.darek.application;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.darek.HttpServer;
 
 import java.util.ArrayList;
 import java.util.Collections;

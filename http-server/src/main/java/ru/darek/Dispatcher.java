@@ -63,6 +63,7 @@ public class Dispatcher {
                 if (key.contains(uri)) {
                     logger.info("\nuri: {}\nkey: {}", uri, key);
                     methodNotAllowedProcessor.execute(httpRequest, outputStream);
+                    return;
                 }
             }
             unknownOperationRequestProcessor.execute(httpRequest, outputStream);
