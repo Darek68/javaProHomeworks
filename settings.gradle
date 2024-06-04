@@ -4,4 +4,5 @@ include 'homework-stream-api'
 include 'threadpool11'
 include 'pattern-builder-iterator'
 include 'pattern-proxy'
+include 'http-server'
 
