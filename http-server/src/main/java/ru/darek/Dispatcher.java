@@ -10,11 +10,13 @@ import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 public class Dispatcher {
     private Map<String, RequestProcessor> router;
     private RequestProcessor unknownOperationRequestProcessor;
+    private RequestProcessor methodNotAllowedProcessor;
     private RequestProcessor notAcceptableProcessor;
     private RequestProcessor optionsRequestProcessor;
     private RequestProcessor staticResourcesProcessor;
@@ -32,6 +34,7 @@ public class Dispatcher {
         this.optionsRequestProcessor = new DefaultOptionsProcessor();
         this.staticResourcesProcessor = new DefaultStaticResourcesProcessor();
         this.notAcceptableProcessor = new DefaultNotAcceptableProcessor();
+        this.methodNotAllowedProcessor = new DefaultMethodNotAllowedProcessor();
 
         logger.info("Диспетчер проинициализирован");
     }
@@ -47,7 +50,21 @@ public class Dispatcher {
             staticResourcesProcessor.execute(httpRequest, outputStream);
             return;
         }
+
+
         if (!router.containsKey(httpRequest.getRouteKey())) {
+            String uri = "";
+            String[] elements = httpRequest.getRouteKey().trim().split(" ");
+            if (elements.length > 1) uri = elements[1];
+            Iterator<Map.Entry<String, RequestProcessor>> iterator = router.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<String, RequestProcessor> entry = iterator.next();
+                String key = entry.getKey();
+                if (key.contains(uri)) {
+                    logger.info("\nuri: {}\nkey: {}", uri, key);
+                    methodNotAllowedProcessor.execute(httpRequest, outputStream);
+                }
+            }
             unknownOperationRequestProcessor.execute(httpRequest, outputStream);
             return;
         }

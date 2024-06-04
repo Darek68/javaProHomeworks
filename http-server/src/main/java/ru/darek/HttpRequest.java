@@ -17,7 +17,7 @@ public class HttpRequest {
     private String body;
     private static final String CRLF = "\r\n";
 
-    private static final Logger logger = LoggerFactory.getLogger(HttpRequest.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(HttpRequest.class);
 
     public String getRouteKey() {
         return String.format("%s %s", method, uri);
@@ -68,8 +68,6 @@ public class HttpRequest {
         }
     }
 
-
-
     public void parseRequestLine() {
         int start, stop;
         String headerName, headerValue;
@@ -87,7 +85,7 @@ public class HttpRequest {
                 this.parameters.put(keyValue[0], keyValue[1]);
             }
         }
-        logger.debug("\nall-rawRequest\n{}", rawRequest);
+        logger.info("\nall-rawRequest\n{}", rawRequest);
         stop = rawRequest.indexOf(CRLF) + 2;
         do{
             start = stop;
@@ -96,11 +94,10 @@ public class HttpRequest {
             start = stop + 2;
             stop = rawRequest.indexOf(CRLF,start);
             headerValue = rawRequest.substring(start,stop).trim();
-            logger.debug("header={}", headerName + " : " + headerValue);
+            logger.info("header={}", headerName + " : " + headerValue);
             headers.put(headerName,headerValue);
             stop += 2;
         } while (stop != rawRequest.indexOf(CRLF,stop));
-        System.out.println("Accept " + headers.get("Accept").toString());
     }
     public String getHeaderValue(String key) {
         return headers.get(key);
