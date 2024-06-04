@@ -13,7 +13,9 @@ public class HttpRequest {
     private String uri;
     private HttpMethod method;
     private Map<String, String> parameters;
+    private Map<String, String> headers = new HashMap<>();
     private String body;
+    private static final String CRLF = "\r\n";
 
     private static final Logger logger = LoggerFactory.getLogger(HttpRequest.class.getName());
 
@@ -42,7 +44,7 @@ public class HttpRequest {
         this.parseRequestLine();
         this.tryToParseBody();
 
-        logger.debug("\n{}", rawRequest);
+        logger.debug("\nall-rawRequest\n{}", rawRequest);
         logger.trace("{} {}\nParameters: {}\nBody: {}", method, uri, parameters, body); // TODO правильно все поназывать
     }
 
@@ -66,7 +68,11 @@ public class HttpRequest {
         }
     }
 
+
+
     public void parseRequestLine() {
+        int start, stop;
+        String headerName, headerValue;
         int startIndex = rawRequest.indexOf(' ');
         int endIndex = rawRequest.indexOf(' ', startIndex + 1);
         this.uri = rawRequest.substring(startIndex + 1, endIndex);
@@ -81,5 +87,22 @@ public class HttpRequest {
                 this.parameters.put(keyValue[0], keyValue[1]);
             }
         }
+        logger.debug("\nall-rawRequest\n{}", rawRequest);
+        stop = rawRequest.indexOf(CRLF) + 2;
+        do{
+            start = stop;
+            stop = rawRequest.indexOf(":",start);
+            headerName = rawRequest.substring(start,stop).trim();
+            start = stop + 2;
+            stop = rawRequest.indexOf(CRLF,start);
+            headerValue = rawRequest.substring(start,stop).trim();
+            logger.debug("header={}", headerName + " : " + headerValue);
+            headers.put(headerName,headerValue);
+            stop += 2;
+        } while (stop != rawRequest.indexOf(CRLF,stop));
+        System.out.println("Accept " + headers.get("Accept").toString());
+    }
+    public String getHeaderValue(String key) {
+        return headers.get(key);
     }
 }

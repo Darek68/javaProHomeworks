@@ -3,10 +3,7 @@ package ru.darek;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.darek.application.processors.*;
-import ru.darek.processors.DefaultOptionsProcessor;
-import ru.darek.processors.DefaultStaticResourcesProcessor;
-import ru.darek.processors.RequestProcessor;
-import ru.darek.processors.DefaultUnknownOperationProcessor;
+import ru.darek.processors.*;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -18,6 +15,7 @@ import java.util.Map;
 public class Dispatcher {
     private Map<String, RequestProcessor> router;
     private RequestProcessor unknownOperationRequestProcessor;
+    private RequestProcessor notAcceptableProcessor;
     private RequestProcessor optionsRequestProcessor;
     private RequestProcessor staticResourcesProcessor;
 
@@ -33,11 +31,14 @@ public class Dispatcher {
         this.unknownOperationRequestProcessor = new DefaultUnknownOperationProcessor();
         this.optionsRequestProcessor = new DefaultOptionsProcessor();
         this.staticResourcesProcessor = new DefaultStaticResourcesProcessor();
+        this.notAcceptableProcessor = new DefaultNotAcceptableProcessor();
 
         logger.info("Диспетчер проинициализирован");
     }
 
     public void execute(HttpRequest httpRequest, OutputStream outputStream) throws IOException {
+        String typeRec;
+        String typeProc;
         if (httpRequest.getMethod() == HttpMethod.OPTIONS) {
             optionsRequestProcessor.execute(httpRequest, outputStream);
             return;
@@ -48,6 +49,12 @@ public class Dispatcher {
         }
         if (!router.containsKey(httpRequest.getRouteKey())) {
             unknownOperationRequestProcessor.execute(httpRequest, outputStream);
+            return;
+        }
+        typeProc = ((RequestProcessorType) router.get(httpRequest.getRouteKey())).headerType();
+        typeRec = httpRequest.getHeaderValue("Accept");
+        if (! typeRec.contains(typeProc)) {
+            notAcceptableProcessor.execute(httpRequest, outputStream);
             return;
         }
         router.get(httpRequest.getRouteKey()).execute(httpRequest, outputStream);
