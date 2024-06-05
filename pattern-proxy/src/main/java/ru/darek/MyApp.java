@@ -32,7 +32,7 @@ public class MyApp {
 
     private static void setConnect() {
         try {
-            connection = DriverManager.getConnection(ConnDate.getDatabaseUrl(), ConnDate.getLogin(), ConnDate.getPass());
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/", "postgres", "352800");
             logger.debug("Создан коннект к БД");
         } catch (SQLException e) {
             logger.error("Не удалось подключится к БД: " + e.getMessage());
