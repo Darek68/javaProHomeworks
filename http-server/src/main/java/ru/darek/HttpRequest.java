@@ -2,20 +2,28 @@ package ru.darek;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.darek.application.SessionHandler;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.*;
+
 
 public class HttpRequest {
     private String rawRequest;
     private String uri;
     private HttpMethod method;
     private Map<String, String> parameters;
+    private Map<String, String> headers;
     private String body;
+    private static final String CRLF = "\r\n";
 
-    private static final Logger logger = LoggerFactory.getLogger(HttpRequest.class.getName());
+    private String sessionId;
+    private static final String SESSIONID = "SESSIONID";
+
+    private static final Logger logger = LoggerFactory.getLogger(HttpRequest.class);
 
     public String getRouteKey() {
         return String.format("%s %s", method, uri);
@@ -36,13 +44,19 @@ public class HttpRequest {
     public HttpMethod getMethod() {
         return method;
     }
+    public String getSessionId() {
+        return this.sessionId;
+    }
 
     public HttpRequest(String rawRequest) {
+        this.headers = new HashMap<>();
         this.rawRequest = rawRequest;
         this.parseRequestLine();
         this.tryToParseBody();
+        this.sessionId = new SessionHandler(getHeaderValue("Cookie")).getSessionId();
+        logger.info("sessionIdUUID is {}", this.sessionId);
 
-        logger.debug("\n{}", rawRequest);
+        logger.debug("\nall-rawRequest\n{}", rawRequest);
         logger.trace("{} {}\nParameters: {}\nBody: {}", method, uri, parameters, body); // TODO правильно все поназывать
     }
 
@@ -67,6 +81,8 @@ public class HttpRequest {
     }
 
     public void parseRequestLine() {
+        int start, stop;
+        String headerName, headerValue;
         int startIndex = rawRequest.indexOf(' ');
         int endIndex = rawRequest.indexOf(' ', startIndex + 1);
         this.uri = rawRequest.substring(startIndex + 1, endIndex);
@@ -81,5 +97,21 @@ public class HttpRequest {
                 this.parameters.put(keyValue[0], keyValue[1]);
             }
         }
+        logger.info("\nall-rawRequest\n{}", rawRequest);
+        stop = rawRequest.indexOf(CRLF) + 2;
+        do{
+            start = stop;
+            stop = rawRequest.indexOf(":",start);
+            headerName = rawRequest.substring(start,stop).trim();
+            start = stop + 2;
+            stop = rawRequest.indexOf(CRLF,start);
+            headerValue = rawRequest.substring(start,stop).trim();
+            logger.info("header={}", headerName + " : " + headerValue);
+            headers.put(headerName,headerValue);
+            stop += 2;
+        } while (stop != rawRequest.indexOf(CRLF,stop));
+    }
+    public String getHeaderValue(String key) {
+        return headers.get(key);
     }
 }

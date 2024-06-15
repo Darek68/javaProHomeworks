@@ -5,12 +5,13 @@ import ru.darek.HttpRequest;
 import ru.darek.application.Item;
 import ru.darek.application.Storage;
 import ru.darek.processors.RequestProcessor;
+import ru.darek.processors.RequestProcessorType;
 
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
 
-public class CreateNewProductProcessor implements RequestProcessor {
+public class CreateNewProductProcessor implements RequestProcessor, RequestProcessorType {
     @Override
     public void execute(HttpRequest httpRequest, OutputStream output) throws IOException {
         Gson gson = new Gson();
@@ -24,5 +25,10 @@ public class CreateNewProductProcessor implements RequestProcessor {
                 "Access-Control-Allow-Origin: *\r\n" +
                 "\r\n" + jsonOutItem;
         output.write(response.getBytes(StandardCharsets.UTF_8));
+    }
+
+    @Override
+    public String headerType() {
+        return "application/json";
     }
 }
