@@ -14,7 +14,7 @@ public class CalculatorRequestProcessor implements RequestProcessor, RequestProc
     private static final Logger logger = LoggerFactory.getLogger(CalculatorRequestProcessor.class);
     @Override
     public void execute(HttpRequest httpRequest, OutputStream output) throws IOException {
-        String cookie = httpRequest.getSessionId();
+        String cookie = "\r\nSet-Cookie: SESSIONID=" + httpRequest.getSessionId();
         logger.info("cookie {}", cookie);
         int a = Integer.parseInt(httpRequest.getParameter("a"));
         int b = Integer.parseInt(httpRequest.getParameter("b"));

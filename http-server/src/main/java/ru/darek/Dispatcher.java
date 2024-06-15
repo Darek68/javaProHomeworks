@@ -9,12 +9,11 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
+import java.util.*;
 
 public class Dispatcher {
     private Map<String, RequestProcessor> router;
+    private HashSet<String> setUri;
     private RequestProcessor unknownOperationRequestProcessor;
     private RequestProcessor methodNotAllowedProcessor;
     private RequestProcessor notAcceptableProcessor;
@@ -29,6 +28,7 @@ public class Dispatcher {
         this.router.put("GET /hello", new HelloWorldRequestProcessor());
         this.router.put("GET /items", new GetAllProductsProcessor());
         this.router.put("POST /items", new CreateNewProductProcessor());
+        setUri = new HashSet<>(Arrays.asList("/calc","/hello","/items"));
 
         this.unknownOperationRequestProcessor = new DefaultUnknownOperationProcessor();
         this.optionsRequestProcessor = new DefaultOptionsProcessor();
@@ -40,8 +40,6 @@ public class Dispatcher {
     }
 
     public void execute(HttpRequest httpRequest, OutputStream outputStream) throws IOException {
-        String typeRec;
-        String typeProc;
         if (httpRequest.getMethod() == HttpMethod.OPTIONS) {
             optionsRequestProcessor.execute(httpRequest, outputStream);
             return;
@@ -51,12 +49,16 @@ public class Dispatcher {
             return;
         }
 
-
+        logger.info("\nkey: {}", httpRequest.getRouteKey());
         if (!router.containsKey(httpRequest.getRouteKey())) {
             String uri = "";
             String[] elements = httpRequest.getRouteKey().trim().split(" ");
             if (elements.length > 1) uri = elements[1];
-            Iterator<Map.Entry<String, RequestProcessor>> iterator = router.entrySet().iterator();
+            if (setUri.contains(uri)){
+                methodNotAllowedProcessor.execute(httpRequest, outputStream);
+                return;
+            }
+         /*   Iterator<Map.Entry<String, RequestProcessor>> iterator = router.entrySet().iterator();
             while (iterator.hasNext()) {
                 Map.Entry<String, RequestProcessor> entry = iterator.next();
                 String key = entry.getKey();
@@ -65,10 +67,13 @@ public class Dispatcher {
                     methodNotAllowedProcessor.execute(httpRequest, outputStream);
                     return;
                 }
-            }
+            } */
             unknownOperationRequestProcessor.execute(httpRequest, outputStream);
             return;
         }
+        String typeRec;
+        String typeProc;
+        var x = router.get(httpRequest.getRouteKey());
         typeProc = ((RequestProcessorType) router.get(httpRequest.getRouteKey())).headerType();
         typeRec = httpRequest.getHeaderValue("Accept");
         if (! typeRec.contains(typeProc)) {

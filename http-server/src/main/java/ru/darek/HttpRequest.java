@@ -2,6 +2,7 @@ package ru.darek;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.darek.application.SessionHandler;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,7 +16,7 @@ public class HttpRequest {
     private String uri;
     private HttpMethod method;
     private Map<String, String> parameters;
-    private Map<String, String> headers = new HashMap<>();
+    private Map<String, String> headers;
     private String body;
     private static final String CRLF = "\r\n";
 
@@ -44,23 +45,16 @@ public class HttpRequest {
         return method;
     }
     public String getSessionId() {
-        int start, stop;
-        String sessionId = getHeaderValue("Cookie");
-        if (sessionId!=null && sessionId.contains(SESSIONID)){
-          /*  start = sessionId.indexOf("SESSIONID") + 9;
-            stop = sessionId.indexOf(" ",start);
-            sessionId = sessionId.substring(start,stop);
-            if (sessionId==SESSIONID) */ return "";
-        }
-        return ("\r\nSet-Cookie: SESSIONID=" + this.sessionId);
+        return this.sessionId;
     }
 
     public HttpRequest(String rawRequest) {
+        this.headers = new HashMap<>();
         this.rawRequest = rawRequest;
         this.parseRequestLine();
         this.tryToParseBody();
-        this.sessionId = UUID.randomUUID().toString();
-        logger.info("sessionIdUUID {}", sessionId);
+        this.sessionId = new SessionHandler(getHeaderValue("Cookie")).getSessionId();
+        logger.info("sessionIdUUID is {}", this.sessionId);
 
         logger.debug("\nall-rawRequest\n{}", rawRequest);
         logger.trace("{} {}\nParameters: {}\nBody: {}", method, uri, parameters, body); // TODO правильно все поназывать

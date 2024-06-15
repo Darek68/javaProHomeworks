@@ -14,10 +14,10 @@ public class HelloWorldRequestProcessor implements RequestProcessor, RequestProc
     private static final Logger logger = LoggerFactory.getLogger(HelloWorldRequestProcessor.class);
     @Override
     public void execute(HttpRequest httpRequest, OutputStream output) throws IOException {
-        String cookie = httpRequest.getSessionId();
+        String cookie = "\r\nSet-Cookie: SESSIONID=" + httpRequest.getSessionId();
         logger.info("cookie {}", cookie);
         // CRLF
-        String response = "HTTP/1.1 200 OK" + cookie + "\r\nContent-Type: text/html\r\nETag: \"beli-berda-12343\"\r\nCache-Control: max-age=10\r\n\r\n<html><body><h1>Hello World!!!</h1></body></html>";
+        String response = "HTTP/1.1 200 OK" + cookie + "\r\nContent-Type: text/html\r\nETag: beli-berda-12343\r\nCache-Control: max-age=10\r\n\r\n<html><body><h1>Hello World!!!</h1></body></html>";
         output.write(response.getBytes(StandardCharsets.UTF_8));
     }
 

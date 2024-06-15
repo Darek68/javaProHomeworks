@@ -15,10 +15,10 @@ import java.util.List;
 public class GetAllProductsProcessor implements RequestProcessor, RequestProcessorType {
     @Override
     public void execute(HttpRequest httpRequest, OutputStream output) throws IOException {
-        String cookie = httpRequest.getSessionId();
+        String sessionId = httpRequest.getSessionId();
         List<Item> items = Storage.getItems();
         Gson gson = new Gson();
-        String result = "HTTP/1.1 200 OK" + cookie +
+        String result = "HTTP/1.1 200 OK\r\n" + sessionId +
                 "Content-Type: application/json\r\n" +
                 "Connection: keep-alive\r\n" +
                 "Access-Control-Allow-Origin: *\r\n\r\n" + gson.toJson(items);
@@ -31,3 +31,4 @@ public class GetAllProductsProcessor implements RequestProcessor, RequestProcess
         return "application/json";
     }
 }
+
